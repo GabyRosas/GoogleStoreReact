@@ -1,0 +1,32 @@
+{
+    "products": [
+        {
+            "name": "Google Pixel Buds Pro",
+            "price": "229",
+            "colors": [
+            ],
+            "images": [
+                "./images/earbuds/earbuds_01.png",
+                "./images/earbuds/earbuds_02.png",
+                "./images/earbuds/earbuds_03.png",
+                "./images/earbuds/earbuds_04.png"
+            ],
+            "category": "Music & Sound"
+        },
+        {
+            "name": "Fitbit Inspire",
+            "price": "99.95",
+            "colors": [
+                "Midnight Zen",
+                "Lilac Bliss",
+                "Morning Glow"
+            ],
+            "images": [
+                "./images/smartwatch/smartwatch_black.png",
+                "./images/smartwatch/smartwatch_pink.png",
+                "./images/smartwatch/smartwatch_yellow.png"
+            ],
+            "category": "Health and Fitness Tracker"
+        }
+    ]
+}
