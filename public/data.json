@@ -1,6 +1,7 @@
 {
     "products": [
-        {
+        {   
+            "id": "0",
             "name": "Google Pixel Buds Pro",
             "price": "229",
             "colors": [
@@ -13,7 +14,8 @@
             ],
             "category": "Music & Sound"
         },
-        {
+        {   
+            "id": "1",
             "name": "Fitbit Inspire",
             "price": "99.95",
             "colors": [
