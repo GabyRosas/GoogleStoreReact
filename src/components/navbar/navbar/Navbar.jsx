@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+
+
 function Navbar() {
     return (
       <nav className="bg-white p-4 shadow-md"> 
@@ -39,9 +42,10 @@ function Navbar() {
             <a href="#help">
               <img src="/images/icons/Help.svg" alt="Help" className="h-6 w-6 hover:opacity-75 cursor-pointer" />
             </a>
-            <a href="#cart">
-              <img src="/images/icons/Cart.svg" alt="Cart" className="h-6 w-6 hover:opacity-75 cursor-pointer" />
-            </a>
+            <Link to={`cart`}>
+            <img src="/images/icons/Cart.svg" alt="Cart" className="h-6 w-6 hover:opacity-75 cursor-pointer" />
+            </Link>
+              
             <a href="#user">
               <img src="/images/icons/Avatar.svg" alt="User" className="h-6 w-6 hover:opacity-75 cursor-pointer" />
             </a>

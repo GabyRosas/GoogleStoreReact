@@ -1,9 +1,31 @@
-import Navbar from './components/navbar/Navbar.jsx';
+import Navbar from './components/navbar/navbar/Navbar.jsx';
+import Cart from './components/navbar/cart/Cart.jsx';
+import Main from './components/navbar/main/Main.jsx';
+import {
+  HashRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom';
+
+
+
 
 
 export default function App() {
   return (
-    <Navbar/>
+    <>
+      <Router>
+          <Navbar />
+          <Routes>
+            <Route path='/' element={<Main />} />
+            <Route path='/cart' element={<Cart />} />
+          </Routes>
+      </Router>
 
+    </>
   )
 }
+
+
+
+
