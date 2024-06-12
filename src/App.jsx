@@ -1,10 +1,12 @@
-//import Navbar from '../src/components/navbar';
+import Navbar from './components/navbar/Navbar';
 import Footer from "./components/footer/Footer";
+
 
 export default function App() {
   return (
-    <div className="App">      
-   <Footer/>
-    </div>
+    <>   
+    <Navbar/>
+    <Footer/>
+     </>
   )
 }
