@@ -2,7 +2,7 @@
     "products": [
         {
             "name": "Google Pixel Buds Pro",
-            "price": "199.99",
+            "price": "229",
             "colors": [
             ],
             "images": [
@@ -15,16 +15,16 @@
         },
         {
             "name": "Fitbit Inspire",
-            "price": "99.99",
+            "price": "99.95",
             "colors": [
                 "Midnight Zen",
                 "Lilac Bliss",
                 "Morning Glow"
             ],
             "images": [
-                "./images/",
-                "https://example.com/fitbitinspire/image2.jpg",
-                "https://example.com/fitbitinspire/image3.jpg"
+                "./images/smartwatch/smartwatch_black.png",
+                "./images/smartwatch/smartwatch_pink.png",
+                "./images/smartwatch/smartwatch_yellow.png"
             ],
             "category": "Health and Fitness Tracker"
         }
