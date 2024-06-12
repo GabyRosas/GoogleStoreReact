@@ -1,20 +1,27 @@
+/* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import ProductDetails from '../product-details/ProductDetails';
+import ProductImages from '../product-images/ProductImages';
+import AddToCart from '../add-to-cart/AddToCart';
+import DetailsLink from '../details-link/DetailsLink';
 
-const Products = () => {
+const Products = ({ category }) => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const { productId } = useParams();
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('../../../public/data.json');
+                const response = await fetch('/public/data.json'); // Corretto il percorso
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
                 const data = await response.json();
-                console.log(data.products)
-                setProducts(data.products);
+                const filteredProducts = data.products.filter(product => product.category === category);
+                setProducts(filteredProducts);
                 setLoading(false);
             } catch (error) {
                 console.error('There was an error:', error);
@@ -24,17 +31,26 @@ const Products = () => {
         };
 
         fetchData();
-    }, []);
+    }, [category]);
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error}</p>;
 
+    const product = productId ? products.find(p => p.id === parseInt(productId)) : products[0];
+
+    if (!product) return <p>Product not found</p>;
+
     return (
-        <div className="product-page">
-            <ProductImages images={product.images} />
-            <ProductDetails details={product.details} />
-            <AddToCart price={product.price} />
-        </div>
+        <>
+            <DetailsLink />
+            <section className="grid gap-5 lg:grid-cols-[auto_35%] grid-cols-1 px-[22px]">
+                <ProductImages images={product.images} name={product.name} />
+                <div>
+                    <ProductDetails product={product} />
+                    <AddToCart price={product.price} />
+                </div>
+            </section>
+        </>
     );
 }
 
