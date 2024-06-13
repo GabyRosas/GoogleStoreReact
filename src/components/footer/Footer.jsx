@@ -1,7 +1,7 @@
 
 function Footer() {
     return (
-      <footer className="flex justify-between px-40 h-10 fixed bottom-10 w-full" style={{ backgroundColor: '#f8f9fa', fontSize: '8px' }}>
+      <footer className="flex justify-between px-40 h-10 fixed bottom-0 w-full" style={{ backgroundColor: '#f8f9fa', fontSize: '8px' }}>
         <ul className="flex items-center gap-4">
         <li><a href="https://twitter.com/madebygoogle"><img src="/images/icons/SM-x.svg" alt="Twitter"/></a></li>
         <li><a href="https://www.instagram.com/madebygoogle/"><img src="/images/icons/SM-instagram.svg" alt="Instagram"/></a></li>
