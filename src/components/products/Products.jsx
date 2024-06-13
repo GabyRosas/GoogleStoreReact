@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ProductDetails from '../product-details/ProductDetails';
 import ProductImages from '../product-images/ProductImages';
@@ -46,7 +46,7 @@ const Products = ({ category }) => {
         <>
             <DetailsLink />
             <main className="grid gap-5 lg:grid-cols-[auto_35%] grid-cols-1 px-[22px] h-full ">
-                <ProductImages images={product.images} name={product.name} />
+                <ProductImages images={product.images} name={product.name} category={product.category} />
                 <div>
                     <ProductDetails product={product} />
                     <AddToCart product={product} />

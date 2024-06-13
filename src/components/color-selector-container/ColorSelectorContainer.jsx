@@ -8,7 +8,6 @@ import SmartWatchColorSelect from "../smartwatch-color-select/SmartWatchColorSel
 const ColorSelectorContainer = ({ colors, category, image }) => {
     // const [color, setColor ] = useState(colors[0]);
 
-    console.log(category);
     return (
         <div className="md:mb-[30px]">
             <h3 className="text-[length:var(--fs-regular)] font-[number:var(--fw-regular)] mb-2.5">Choose a color</h3>
