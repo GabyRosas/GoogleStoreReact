@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+
+
 function Navbar() {
     return (
       <nav className="bg-white p-4 shadow-md"> 
@@ -14,10 +17,10 @@ function Navbar() {
             <a href="#Phones" className="text-gray-700 hover:text-gray-500">Phones</a>
             </li>
             <li>
-            <a href="#Earbuds" className="text-gray-700 hover:text-gray-500">Earbuds</a>
+            <Link to={'/'} className="text-gray-700 hover:text-gray-500">Earbuds</Link>
             </li>
             <li>
-            <a href="#Watches" className="text-gray-700 hover:text-gray-500">Watches</a>
+            <Link to={'/fitbit'} className="text-gray-700 hover:text-gray-500">Watches</Link>
             </li>
             <li>
             <a href="#Smart Home" className="text-gray-700 hover:text-gray-500">Smart Home</a>
@@ -39,9 +42,10 @@ function Navbar() {
             <a href="#help">
               <img src="/images/icons/Help.svg" alt="Help" className="h-6 w-6 hover:opacity-75 cursor-pointer" />
             </a>
-            <a href="#cart">
-              <img src="/images/icons/Cart.svg" alt="Cart" className="h-6 w-6 hover:opacity-75 cursor-pointer" />
-            </a>
+            <Link to={`cart`}>
+            <img src="/images/icons/Cart.svg" alt="Cart" className="h-6 w-6 hover:opacity-75 cursor-pointer" />
+            </Link>
+              
             <a href="#user">
               <img src="/images/icons/Avatar.svg" alt="User" className="h-6 w-6 hover:opacity-75 cursor-pointer" />
             </a>

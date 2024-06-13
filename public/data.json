@@ -1,32 +1,69 @@
 {
     "products": [
         {
+            "id": 1,
             "name": "Google Pixel Buds Pro",
-            "price": "229",
-            "colors": [
-            ],
+            "category": "earbuds",
+            "description": "Music & Sound",
+            "price": 229,
             "images": [
                 "./images/earbuds/earbuds_01.png",
                 "./images/earbuds/earbuds_02.png",
                 "./images/earbuds/earbuds_03.png",
                 "./images/earbuds/earbuds_04.png"
             ],
-            "category": "Music & Sound"
+            "colors": [
+                {
+                    "name": "Sky Blue",
+                    "code": "#9ec6ea"
+                },
+                {
+                    "name": "Cream White",
+                    "code": "#e7e3e0"
+                },
+                {
+                    "name": "Midnight Black",
+                    "code": "#4b4b4d"
+                },
+                {
+                    "name": "Soft Gray",
+                    "code": "#d2d7da"
+                },
+                {
+                    "name": "Pale Green",
+                    "code": "#dfe5b7"
+                },
+                {
+                    "name": "Coral Red",
+                    "code": "#e18472"
+                }
+            ]
         },
         {
-            "name": "Fitbit Inspire",
-            "price": "99.95",
-            "colors": [
-                "Midnight Zen",
-                "Lilac Bliss",
-                "Morning Glow"
-            ],
+            "id": 2,
+            "name": "Fitbit Inspire 3",
+            "category": "fitbit",
+            "description": "Health & Fitness Tracker",
+            "price": 99.95,
             "images": [
                 "./images/smartwatch/smartwatch_black.png",
                 "./images/smartwatch/smartwatch_pink.png",
                 "./images/smartwatch/smartwatch_yellow.png"
             ],
-            "category": "Health and Fitness Tracker"
+            "colors": [
+                {
+                    "name": "Midnight Zen",
+                    "code": "#4b4b4d"
+                },
+                {
+                    "name": "Lilac Bliss",
+                    "code": "#e7e3e0"
+                },
+                {
+                    "name": "Morning Glow",
+                    "code": "#e18472"
+                }
+            ]
         }
     ]
 }
