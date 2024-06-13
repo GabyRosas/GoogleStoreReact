@@ -1,5 +1,5 @@
 import Navbar from './components/navbar//Navbar.jsx';
-import Cart from './components/navbar/cart/Cart.jsx';
+import Cart from './components/cart/Cart.jsx';
 import Products from './components/products/Products.jsx';
 import Footer from "./components/footer/Footer";
 import {

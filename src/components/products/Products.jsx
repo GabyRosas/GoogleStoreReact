@@ -43,13 +43,13 @@ const Products = ({ category }) => {
     return (
         <>
             <DetailsLink />
-            <section className="grid gap-5 lg:grid-cols-[auto_35%] grid-cols-1 px-[22px]">
+            <main className="grid gap-5 lg:grid-cols-[auto_35%] grid-cols-1 px-[22px] h-full ">
                 <ProductImages images={product.images} name={product.name} />
                 <div>
                     <ProductDetails product={product} />
                     <AddToCart price={product.price} />
                 </div>
-            </section>
+            </main>
         </>
     );
 }
