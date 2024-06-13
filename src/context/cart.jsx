@@ -1,28 +1,26 @@
+/* eslint-disable react/prop-types */
 import { createContext, useState } from "react";
+
 
 export const CartContext = createContext();
 
 export function CartContextProvider({ children }) {
   const [cart, setCart] = useState([]);
 
-  const addToCart = (product) => {
-    const existingProduct = cart.find((p) => p.id === product.id);
+  const addToCart = (product, quantity) => {
+     const existingProduct = cart.find((p) => p.id === product.id);
+     
     if (existingProduct) {
       increaseQuantity(existingProduct);
+      console.log('Esto en el if')
     } else {
-      //   product.subtotal = product.quantity * product.price;
-      setCart((prevState) => [
-        ...prevState,
-        {
-          ...prevState,
-          quantity: 1,
-          subtotal: quantity * price,
-        },
-      ]);
-
-      console.log("Adding to cart");
+      product.quantity = quantity;
+      product.subtotal = product.quantity * product.price;
+      setCart([...cart, product]);
+      console.log('Estoy en el else');
     }
-
+    }
+ 
     const increaseQuantity = (product) => {
       product.quantity++;
     };
@@ -51,7 +49,7 @@ export function CartContextProvider({ children }) {
 
     function clearCart() {
       setCart([]);
-    }
+    } 
 
     return (
       <CartContext.Provider
@@ -64,5 +62,6 @@ export function CartContextProvider({ children }) {
         {children}
       </CartContext.Provider>
     );
-  };
-}
+  }
+
+
