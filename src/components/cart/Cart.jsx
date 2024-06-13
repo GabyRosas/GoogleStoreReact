@@ -2,35 +2,6 @@
 /*import React from "react";
 
 
-
-
-
-function decreaseQuantity(product) {
-  if (product.quantity > 1) {
-    product.quantity--;
-  } else {
-    removeProduct(product);
-  }
-}
-
-function removeProduct(product) {
-  const index = cart.indexOf(product);
-  cart.splice(index, 1);
-}
-
-function updateSubtotal(product) {
-  const subtotal = product.price * product.quantity;
-  product.subtotal = subtotal;
-}
-
-function cartTotal() {
-  return cart.reduce((total, product) => total + product.subtotal, 0);
-}
-
-function clearCart() {
-  cart.length = 0;
-}
-
 function ShowReceipt() {
   return (
     <div id="receipt-container" className="flex flex-col items-center p-8">
