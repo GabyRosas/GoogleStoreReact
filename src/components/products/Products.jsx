@@ -1,10 +1,12 @@
 /* eslint-disable react/prop-types */
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import ProductDetails from '../product-details/ProductDetails';
 import ProductImages from '../product-images/ProductImages';
 import AddToCart from '../add-to-cart/AddToCart';
 import DetailsLink from '../details-link/DetailsLink';
+
+
 
 const Products = ({ category }) => {
     const [products, setProducts] = useState([]);
@@ -47,7 +49,7 @@ const Products = ({ category }) => {
                 <ProductImages images={product.images} name={product.name} />
                 <div>
                     <ProductDetails product={product} />
-                    <AddToCart price={product.price} />
+                    <AddToCart product={product} />
                 </div>
             </main>
         </>
