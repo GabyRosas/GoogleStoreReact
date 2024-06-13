@@ -17,10 +17,10 @@ function Navbar() {
             <a href="#Phones" className="text-gray-700 hover:text-gray-500">Phones</a>
             </li>
             <li>
-            <a href="#Earbuds" className="text-gray-700 hover:text-gray-500">Earbuds</a>
+            <Link to={'/'} className="text-gray-700 hover:text-gray-500">Earbuds</Link>
             </li>
             <li>
-            <a href="#Watches" className="text-gray-700 hover:text-gray-500">Watches</a>
+            <Link to={'/fitbit'} className="text-gray-700 hover:text-gray-500">Watches</Link>
             </li>
             <li>
             <a href="#Smart Home" className="text-gray-700 hover:text-gray-500">Smart Home</a>

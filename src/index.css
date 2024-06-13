@@ -117,9 +117,30 @@ hr {
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  font-size: var(--fs-regular);
-  font-weight: var(--fw-regular);
+    font-family: "Inter", sans-serif;
+    font-size: var(--fs-regular);
+    font-weight: var(--fw-regular);
 
-  color: var(--col-secondary);
+    color: var(--col-secondary);
+}
+
+h1 {
+    font-size: var(--fs-sm-title);
+    font-weight: var(--fw-bold);
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: var(--fs-title);
+    }
+}
+
+h3 {
+    font-size: var(--fs-title);
+}
+
+footer {
+    font-size: var(--fs-small);
+    font-weight: var(--fw-regular);
+    text-align: center;
 }
