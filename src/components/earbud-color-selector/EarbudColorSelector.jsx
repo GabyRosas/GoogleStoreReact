@@ -1,15 +1,18 @@
 /* eslint-disable react/prop-types */
 
 
-const EarbudColorSelector = ({ color, key }) => {
-    console.log(color.code);
+const EarbudColorSelector = ({ color }) => {
     return (
-
-            <li key={key}>
-                <button className={`w-9 h-9 border border-[color:var(--col-secondary)] rounded-[50%] border-solid bg-[${color.code}]`}>
-                    <span className='sr-only'>{color.name}</span>
-                </button>
-            </li>
-    )
+        <li>
+            <button
+                className={`w-9 h-9 border border-[color:var(--col-secondary)] rounded-[50%] border-solid cursor-pointer`}
+                style={{ backgroundColor: color.code }}
+                aria-label={color.name}
+                >
+                <span className='sr-only'>{color.name}</span>
+            </button>
+        </li>
+    );
 }
-export default EarbudColorSelector
+
+export default EarbudColorSelector;

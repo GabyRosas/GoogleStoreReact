@@ -16,13 +16,15 @@ const ProductImages = ({ images, name, category }) => {
         return (
             <div className="grid align-center grid-cols-1 lg:grid-cols-[50px_auto] gap-10  ">
                 <ul className="flex-col justify-center gap-2.5 hidden lg:flex">
-                    {filteredImages.map((image, index) => (
+                    {filteredImages.map((image, index) => {
+                        console.log('hello');
+                        return(
                         <CircleImages
                             key={index}
                             image={image}
                             onClick={() => setMainImage(image)}
                         />
-                    ))}
+                    )})}
                 </ul>
                 <MainImage mainImage={mainImage} name={name}/>
             </div>
