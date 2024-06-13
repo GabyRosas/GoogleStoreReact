@@ -1,22 +1,9 @@
 
-import React from "react";
+/*import React from "react";
 
-const cart = [];
 
-function addToCart(product) {
-  const existingProduct = cart.find((p) => p.id === product.id);
-  if (existingProduct) {
-    increaseQuantity(existingProduct);
-  } else {
-    product.quantity = 1;
-    product.subtotal = product.quantity * product.price;
-    cart.push(product);
-  }
-}
 
-function increaseQuantity(product) {
-  product.quantity++;
-}
+
 
 function decreaseQuantity(product) {
   if (product.quantity > 1) {
@@ -130,4 +117,4 @@ export {
   updateSubtotal,
   removeProduct,
   clearCart,
-};
+};*/
