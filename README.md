@@ -77,9 +77,9 @@ The following people have contributed to the development of "Google Store - Reac
 
 - Gaby Rosas, Developer
 - Carla Sanchez,  Developer and Scrum Master
-- Valentina - Developer
-- Carol Alonso Developer
-- Shaila González - Developer
+- Valentina Toni, Developer
+- Carol Alonso, Developer
+- Shaila González, Developer
 
 
 
