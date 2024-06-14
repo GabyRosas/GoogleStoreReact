@@ -4,12 +4,16 @@ import CartItemCount from './CartItemCount';
 
 function Cart() {
   return (
-    <div  className="flex flex-col items-center p-8">
-      <h1 className="receipt-title text-2xl font-bold text-center mb-4">Cart</h1>
-      <h2>Items</h2> <CartItemCount/>
-      <CartProducts/>
-      <CartOrderSummary/>
-    </div>
+    <>
+      <header className="p-8">
+        <h1 className=" text-[length:var(--fs-title)] text-center">Cart</h1>
+        <p className="text-center  text-[length:var(--fs-subtitle)]">Items <CartItemCount/> </p>
+      </header>
+      <main className="flex flex-col items-center px-10 lg:flex-row lg:items-start justify-center gap-5">
+        <CartProducts />
+        <CartOrderSummary />
+      </main>
+    </>
   );
 }
 

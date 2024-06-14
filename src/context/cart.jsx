@@ -8,7 +8,7 @@ export function CartContextProvider({ children }) {
 
   const [cart, setCart] = useState([])
   const [shippingCost, setShippingCost] = useState(4.90); 
- 
+
 
   const addToCart = (product, quantity) => {
     setCart(prevCart => {
