@@ -4,6 +4,7 @@ import CartProductItem from "./CartProductItem"
 const CartProducts = () => {
     
     const {cart} = useCart()
+    console.log(cart)
 
     return (
     <ul className="receipt-component  my-4 w-full max-w-2xl bg-white shadow-md p-4 rounded-md">
