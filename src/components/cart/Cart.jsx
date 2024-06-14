@@ -1,4 +1,6 @@
 
+import { useCart } from "../../customHooks/useCart";
+
 import CartOrderSummary from "./CartOrderSummary";
 import CartProducts from "./CartProducts";
 
@@ -10,6 +12,7 @@ function Cart() {
       <p>Items</p>
       <CartProducts/>
       <CartOrderSummary/>
+
     </div>
   );
 }
