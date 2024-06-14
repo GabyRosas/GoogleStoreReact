@@ -1,22 +1,29 @@
+import React from 'react';
 
 function Footer() {
-    return (
-      <footer className="flex justify-between px-40 h-10 fixed bottom-0 w-full" style={{ backgroundColor: '#f8f9fa', fontSize: '8px' }}>
-        <ul className="flex items-center gap-4">
-        <li><a href="https://twitter.com/madebygoogle"><img src="/images/icons/SM-x.svg" alt="Twitter"/></a></li>
-        <li><a href="https://www.instagram.com/madebygoogle/"><img src="/images/icons/SM-instagram.svg" alt="Instagram"/></a></li>
-        <li><a href="https://facebook.com/madebygoogle"><img src="/images/icons/SM-facebook.svg" alt="Facebook"/></a></li>
-        <li><a href="https://youtube.com/madebygoogle"><img src="/images/icons/SM-youtube.svg" alt="Youtube"/></a></li>
-        <li><a href="https://www.tiktok.com/@googlepixel"><img src="/images/icons/SM-tiktok.svg" alt="Tiktok"/></a></li>
-      </ul>
-      <ul className="flex items-center gap-10 pe-30">
-        <li className="flex items-center gap-2"><img src="/images/icons/Spain.svg" alt="bandera"/><a href="#">Spain</a></li>
-        <li><a href="#">Privacy</a></li>
-        <li><a href="#">Google Nest Commitment to Privacy</a></li>
-        <li><a href="#">Sales Terms</a></li>
-        <li><a href="#">Terms of Service</a></li>            
-      </ul>
+  return (
+    <footer className="bg-gray-100 py-4 px-6 md:px-12 lg:px-24 xl:px-40 fixed bottom-0 w-full">
+      <div className="flex flex-col md:flex-row md:justify-between items-center">
+        {/* Redes Sociales */}
+        <ul className="flex items-center gap-4 mb-4 md:mb-0">
+          <li><a href="https://twitter.com/madebygoogle" target="_blank" rel="noopener noreferrer"><img src="/images/icons/SM-x.svg" alt="Twitter"/></a></li>
+          <li><a href="https://www.instagram.com/madebygoogle/" target="_blank" rel="noopener noreferrer"><img src="/images/icons/SM-instagram.svg" alt="Instagram"/></a></li>
+          <li><a href="https://facebook.com/madebygoogle" target="_blank" rel="noopener noreferrer"><img src="/images/icons/SM-facebook.svg" alt="Facebook"/></a></li>
+          <li><a href="https://youtube.com/madebygoogle" target="_blank" rel="noopener noreferrer"><img src="/images/icons/SM-youtube.svg" alt="Youtube"/></a></li>
+          <li><a href="https://www.tiktok.com/@googlepixel" target="_blank" rel="noopener noreferrer"><img src="/images/icons/SM-tiktok.svg" alt="Tiktok"/></a></li>
+        </ul>
+        
+        {/* Enlaces de texto */}
+        <ul className="flex flex-col md:flex-row items-center gap-2 md:gap-6 mb-4 md:mb-0">
+          <li className="flex items-center gap-2"><img src="/images/icons/Spain.svg" alt="bandera" className="h-4 w-4" />
+          <a href="#" className="text-sm">Spain</a> </li>
+          <li><a href="#" className="text-sm">Privacy</a></li>
+          <li><a href="#" className="text-sm">Google Nest Commitment to Privacy</a></li>
+          <li><a href="#" className="text-sm">Sales Terms</a></li>
+          <li><a href="#" className="text-sm">Terms of Service</a></li>
+        </ul>
+      </div>
     </footer>
-);
+  );
 }
 export default Footer;
