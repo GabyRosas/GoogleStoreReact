@@ -89,7 +89,8 @@ export function CartContextProvider({ children }) {
         clearCart,
         cartSubtotal,
         cartTotal,
-        shippingCost
+        shippingCost,
+        setShippingCost,
       }}
     >
       {children}

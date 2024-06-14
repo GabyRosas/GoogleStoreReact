@@ -6,7 +6,7 @@ const CartProducts = () => {
     const {cart} = useCart()
 
     return (
-    <ul className="receipt-component  my-4 w-full max-w-2xl bg-white shadow-md p-4 rounded-md">
+    <ul className="my-4 w-full max-w-2xl p-4 rounded-[20px] bg-[color:var(--col-bg-accent)]">
           {cart.length === 0 ? (
             <p className="text-center text-gray-500">Your cart is empty.</p>
           ) : (
