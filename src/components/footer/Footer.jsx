@@ -15,12 +15,13 @@ function Footer() {
         
         {/* Enlaces de texto */}
         <ul className="flex flex-col md:flex-row items-center gap-2 md:gap-6 mb-4 md:mb-0">
-          <li className="flex items-center gap-2"><img src="/images/icons/Spain.svg" alt="bandera" className="h-4 w-4" />
-          <a href="#" className="text-sm">Spain</a> </li>
+          
           <li><a href="#" className="text-sm">Privacy</a></li>
           <li><a href="#" className="text-sm">Google Nest Commitment to Privacy</a></li>
           <li><a href="#" className="text-sm">Sales Terms</a></li>
           <li><a href="#" className="text-sm">Terms of Service</a></li>
+          <li className="md:-order-1">
+          <a href="#" className= "flex justify-center gap-[5px] text-sm">Spain<img src="/images/icons/Spain.svg" alt="flag" className ="md:-order-1" /></a></li>
         </ul>
       </div>
     </footer>
