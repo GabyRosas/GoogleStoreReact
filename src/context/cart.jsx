@@ -8,11 +8,13 @@ export function CartContextProvider({ children }) {
 
   const [cart, setCart] = useState([])
   const [shippingCost, setShippingCost] = useState(4.90); 
- 
+  const [selectedColor, setSelectedColor] = useState({});
+
+
 
   const addToCart = (product, quantity) => {
     setCart(prevCart => {
-      const existingProduct = prevCart.find((p) => p.id === product.id);
+      const existingProduct = prevCart.find((p) => p.id === product.id && p.selectedColor === product.selectedColor);
 
       if (existingProduct) {
         const updatedProduct = {
@@ -20,25 +22,37 @@ export function CartContextProvider({ children }) {
           quantity: existingProduct.quantity + quantity,
           subtotal: (existingProduct.quantity + quantity) * existingProduct.price
         };
-        console.log(updatedProduct);
-        return prevCart.map((p) => p.id === product.id ? updatedProduct : p);
+        return prevCart.map((p) => (p.id === product.id && p.selectedColor === product.selectedColor) ? updatedProduct : p);
       } else {
         const newProduct = {
           ...product,
           quantity: quantity,
-          subtotal: product.price * quantity
+          subtotal: product.price * quantity,
+          selectedColor: selectedColor,
+          cartId: generateUUID()
         };
-        console.log(newProduct);
         return [...prevCart, newProduct];
-
       }
     });
   };
 
-    const updateQuantity = (productId, quantity) => {
+
+  const generateUUID = () => {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+      var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+      return v.toString(16);
+    });
+  }
+  
+
+    const updateQuantity = (productCartId, quantity) => {
+        if(quantity === 0) {
+          console.error('Quantity must be positive');
+          return;
+         }
         setCart((prevCart) =>
             prevCart.map((item) =>
-                item.id === productId
+                item.cartId === productCartId
                     ? { ...item, quantity, subtotal: quantity * item.price }
                     : item
             )
@@ -47,7 +61,7 @@ export function CartContextProvider({ children }) {
 
     
     const removeProduct = (productId) => {
-        setCart((prevCart) => prevCart.filter((item) => item.id !== productId));
+        setCart((prevCart) => prevCart.filter((item) => item.cartId !== productId));
     };
 
     const cartSubtotal = cart.reduce((total, product) => total + product.subtotal, 0);
@@ -81,7 +95,8 @@ export function CartContextProvider({ children }) {
                 getTotalItems,
                 shippingCost,
                 cartSubtotal,
-                setShippingCost
+                setShippingCost,
+                setSelectedColor
             }}
         >
             {children}

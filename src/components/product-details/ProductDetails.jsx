@@ -5,7 +5,7 @@ import ProductsHeader from "../products-header/ProductsHeader"
 
 
 const ProductDeatils = ({ product }) => {
-    const { name, category, price, colors, images, description } = product;
+    const { name, price, description } = product;
     return (
         <section className="grid grid-cols-[1fr] gap-5 md:grid-cols-[1fr_1fr] lg:grid-cols-[1fr]">
             <ProductsHeader
@@ -15,9 +15,8 @@ const ProductDeatils = ({ product }) => {
 
             />
             <ColorSelectorContainer
-                colors={colors}
-                image={images}
-                category={category}
+                product = {product}
+                
 
             />
         </section>

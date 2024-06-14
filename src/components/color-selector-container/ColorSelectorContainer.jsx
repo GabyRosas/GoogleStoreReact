@@ -1,12 +1,18 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable react/prop-types */
-// import { useState } from "react"
 import EarbudColorSelector from "../earbud-color-selector/EarbudColorSelector"
 import SmartWatchColorSelect from "../smartwatch-color-select/SmartWatchColorSelect"
+import { useCart } from '../../customHooks/useCart';
 
 
-const ColorSelectorContainer = ({ colors, category, image }) => {
-    // const [color, setColor ] = useState(colors[0]);
+const ColorSelectorContainer = ({ product }) => {
+    const { colors, category, images } = product
+    const { setSelectedColor } = useCart()
+
+    const handleColorSelect = (color) => {
+        console.log(color)
+        setSelectedColor(color);
+    };
 
     return (
         <div className="md:mb-[30px]">
@@ -18,7 +24,7 @@ const ColorSelectorContainer = ({ colors, category, image }) => {
                             <EarbudColorSelector
                                 key={index}
                                 color={color}
-                            // onClick={() => setColor(color)}
+                                handleClick={handleColorSelect}
                             />
                         ))}</ul>
                     :
@@ -28,9 +34,8 @@ const ColorSelectorContainer = ({ colors, category, image }) => {
                             <SmartWatchColorSelect
                                 key={index}
                                 color={color}
-                                image={image[index]}
-
-                            // onClick={() => setColor(color)}
+                                image={images[index]}
+                                handleClick={handleColorSelect}                            
                             />
                         ))}</ul>
 

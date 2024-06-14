@@ -8,7 +8,7 @@ const CartProductItem = ({product}) => {
 
     const handleQuantityChange = (e) => {
         const newQuantity = parseInt(e.target.value, 10);
-        updateQuantity(product.id, newQuantity);
+        updateQuantity(product.cartId, newQuantity);
     };
 
  return (
@@ -20,7 +20,7 @@ const CartProductItem = ({product}) => {
                     className="w-16 h-16 object-cover mr-4"
                 />
                 <div>
-                    <h3 className="font-semibold text-lg">{product.name}</h3>
+                    <h3 className="font-semibold text-lg">{`${product.name} in ${product.selectedColor.name} `} </h3>
                     <p className="text-gray-500">Cant: {product.quantity}</p>
                     <label className="sr-only">Quantity</label>
                     <select
@@ -35,7 +35,7 @@ const CartProductItem = ({product}) => {
                     </select>
                 </div>
             </div>
-            <RemoveButton productId={product.id} />
+            <RemoveButton productId={product.cartId} />
         </li>
     );
 };
