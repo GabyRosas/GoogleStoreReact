@@ -7,9 +7,9 @@ const CartProducts = () => {
     console.log(cart)
 
     return (
-    <ul className="receipt-component  my-4 w-full max-w-2xl bg-white shadow-md p-4 rounded-md">
+    <ul className="w-full max-w-2xl p-4 rounded-[20px] bg-[color:var(--col-bg-accent)]">
           {cart.length === 0 ? (
-            <p className="text-center text-gray-500">Your cart is empty.</p>
+            <p className="text-center">Your cart is empty.</p>
           ) : (
             cart.map((product, index) => (
             <CartProductItem key={index}
