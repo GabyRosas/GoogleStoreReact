@@ -5,9 +5,10 @@ import { createContext, useState } from "react";
 export const CartContext = createContext();
 
 export function CartContextProvider({ children }) {
-  const [cart, setCart] = useState([]);
+
+  const [cart, setCart] = useState([])
   const [shippingCost, setShippingCost] = useState(4.90); 
-  // const [taxRate, setTaxRate] = useState(0.21);
+
 
   const addToCart = (product, quantity) => {
     setCart(prevCart => {
@@ -34,66 +35,58 @@ export function CartContextProvider({ children }) {
     });
   };
 
-  const increaseQuantity = (productId) => {
-    setCart(prevCart => 
-      prevCart.map((product) => 
-        product.id === productId 
-          ? { ...product, quantity: product.quantity + 1, subtotal: (product.quantity + 1) * product.price } 
-          : product
-      )
-    );
-  };
+    const updateQuantity = (productId, quantity) => {
+        setCart((prevCart) =>
+            prevCart.map((item) =>
+                item.id === productId
+                    ? { ...item, quantity, subtotal: quantity * item.price }
+                    : item
+            )
+        );
+    };
 
-  // const decreaseQuantity = (productId) => {
-  //   setCart(prevCart => 
-  //     prevCart.map((product) => {
-  //       if (product.id === productId) {
-  //         if (product.quantity > 1) {
-  //           return { ...product, quantity: product.quantity - 1, subtotal: (product.quantity - 1) * product.price };
-  //         } else {
-  //           return null; 
-  //         }
-  //       }
-  //       return product;
-  //     }).filter(product => product !== null)
-  //   );
-  // };
-
-  const cartTotal = () => {
-    // const taxAmount = subtotal * taxRate;
-    if (cartSubtotal > 0 ){
-      return cartSubtotal + shippingCost;
-    } 
-    return 0
     
-  };
+    const removeProduct = (productId) => {
+        setCart((prevCart) => prevCart.filter((item) => item.id !== productId));
+    };
 
+    const cartSubtotal = cart.reduce((total, product) => total + product.subtotal, 0);
 
-  const removeProduct = (productId) => {
-    setCart(prevCart => prevCart.filter(product => product.id !== productId));
-  };
+    const cartTotal = () => {
+      if (cartSubtotal > 0 ){
+        return cartSubtotal + shippingCost;
+      } 
+      return 0
+      
+    };
 
-  const clearCart = () => {
-    setCart([]);
-  };
+    const clearCart = () => {
+        setCart([]);
+    };
 
-  const cartSubtotal = cart.reduce((total, product) => total + product.subtotal, 0);
+    const getTotalItems = () => {
+      return cart.reduce((total, product) => total + product.quantity, 0);
+    };
+  
 
-  return (
-    <CartContext.Provider
-      value={{
-        cart,
-        addToCart,
-        increaseQuantity,
-        removeProduct,
-        clearCart,
-        cartSubtotal,
-        cartTotal,
-        shippingCost,
-        setShippingCost,
-      }}
-    >
-      {children}
-    </CartContext.Provider>
-  );
+    return (
+        <CartContext.Provider
+            value={{
+                cart,
+                addToCart,
+                updateQuantity,
+                removeProduct,
+                cartTotal,
+                clearCart,
+                getTotalItems,
+                shippingCost,
+                cartSubtotal,
+                setShippingCost
+            }}
+        >
+            {children}
+        </CartContext.Provider>
+    );
 }
+  
+

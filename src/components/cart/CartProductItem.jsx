@@ -1,8 +1,19 @@
 /* eslint-disable react/prop-types */
-import DeliveryInfo from '../delivery-info/DeliveryInfo'
-import classes from './CartProductItem.module.css'
+import { useCart } from '../../customHooks/useCart';
+import DeliveryInfo from '../delivery-info/DeliveryInfo';
+import RemoveButton from '../button/RemoveButton';
+import classes from './CartProductItem.module.css';
 
 const CartProductItem = ({ product }) => {
+
+  const { updateQuantity } = useCart();
+
+  const handleQuantityChange = (e) => {
+    const newQuantity = parseInt(e.target.value, 10);
+    updateQuantity(product.id, newQuantity);
+  };
+
+
   return (
     <li
       className={`
@@ -25,8 +36,10 @@ const CartProductItem = ({ product }) => {
         <div className="flex">
           <p >Cant:</p>
           <label className="sr-only">Quantity</label>
-          <select id="quantity"
-            //onChange={handleQuantityChange}
+          <select 
+            id="quantity"
+            value={product.quantity}
+            onChange={handleQuantityChange}
             className="bg-[color:var(--col-bg-accent)] "
           >
             <option value="1">1</option>
@@ -35,12 +48,13 @@ const CartProductItem = ({ product }) => {
         </div>
       </div>
       <div>
-        <p>€{(product.subtotal).toFixed(2)}</p>
+        <p className="my-5">€{(product.subtotal).toFixed(2)}</p>
+        <RemoveButton productId={product.id} />
       </div>
 
-      <DeliveryInfo className="  bg-white row-start-2 col-[2_/_span_4] p-5 w-full"/>
+      <DeliveryInfo className="  bg-white row-start-2 col-[span_5] md:col-[2_/_span_4] p-5 w-full" />
     </li>
   )
 }
 
-export default CartProductItem
+export default CartProductItem;
