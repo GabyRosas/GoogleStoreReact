@@ -5,14 +5,14 @@ import ProductDetails from '../product-details/ProductDetails';
 import ProductImages from '../product-images/ProductImages';
 import AddToCart from '../add-to-cart/AddToCart';
 import DetailsLink from '../details-link/DetailsLink';
-
-
+import { useCart } from '../../customHooks/useCart'; // Importa il contesto del carrello
 
 const Products = ({ category }) => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const { productId } = useParams();
+    const { setSelectedColor, selectedColor } = useCart(); // Ottieni il setter per il selectedColor
 
     useEffect(() => {
         const fetchData = async () => {
@@ -35,6 +35,15 @@ const Products = ({ category }) => {
         fetchData();
     }, [category]);
 
+    useEffect(() => {
+        if (products.length > 0) {
+            const defaultProduct = productId ? products.find(p => p.id === parseInt(productId)) : products[0];
+            if (defaultProduct) {
+                setSelectedColor(defaultProduct.colors[0].code); // Imposta il colore predefinito del prodotto
+            }
+        }
+    }, [products, productId, setSelectedColor]);
+
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error}</p>;
 
@@ -45,11 +54,11 @@ const Products = ({ category }) => {
     return (
         <>
             <DetailsLink />
-            <main className="grid gap-5 lg:grid-cols-[auto_35%] grid-cols-1 px-[22px] h-full ">
+            <main className="grid gap-5 lg:grid-cols-[auto_35%] grid-cols-1 px-[22px] h-full">
                 <ProductImages images={product.images} name={product.name} category={product.category} />
                 <div>
                     <ProductDetails product={product} />
-                    <AddToCart product={product} />
+                    <AddToCart product={product} selectedColor={selectedColor} />
                 </div>
             </main>
         </>

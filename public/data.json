@@ -7,35 +7,41 @@
             "description": "Music & Sound",
             "price": 229,
             "images": [
-                "./images/earbuds/earbuds_01.png",
-                "./images/earbuds/earbuds_02.png",
-                "./images/earbuds/earbuds_03.png",
-                "./images/earbuds/earbuds_04.png"
+                "./images/earbuds/earbuds_01.png", 
+                "./images/earbuds/earbuds_02.png", 
+                "./images/earbuds/earbuds_03.png", 
+                "./images/earbuds/earbuds_04.png" 
             ],
             "colors": [
                 {
                     "name": "Sky Blue",
-                    "code": "#9ec6ea"
+                    "code": "#9ec6ea",
+                    "image": "./images/earbuds/earbuds_color_skyblue.png"
                 },
                 {
                     "name": "Cream White",
-                    "code": "#e7e3e0"
+                    "code": "#e7e3e0",
+                    "image": "./images/earbuds/earbuds_color_creamwhite.png"
                 },
                 {
                     "name": "Midnight Black",
-                    "code": "#4b4b4d"
+                    "code": "#4b4b4d",
+                    "image": "./images/earbuds/earbuds_color_midnightblack.png"
                 },
                 {
                     "name": "Soft Gray",
-                    "code": "#d2d7da"
+                    "code": "#d2d7da",
+                    "image": "./images/earbuds/earbuds_color_softgray.png"
                 },
                 {
                     "name": "Pale Green",
-                    "code": "#dfe5b7"
+                    "code": "#dfe5b7",
+                    "image": "./images/earbuds/earbuds_color_palegreen.png"
                 },
                 {
                     "name": "Coral Red",
-                    "code": "#e18472"
+                    "code": "#e18472",
+                    "image": "./images/earbuds/earbuds_color_coralred.png"
                 }
             ]
         },
@@ -53,15 +59,18 @@
             "colors": [
                 {
                     "name": "Midnight Zen",
-                    "code": "#4b4b4d"
+                    "code": "#4b4b4d",
+                    "image": "./images/smartwatch/smartwatch_black.png"
                 },
                 {
                     "name": "Lilac Bliss",
-                    "code": "#e7e3e0"
+                    "code": "#e7e3e0",
+                    "image": "./images/smartwatch/smartwatch_pink.png"
                 },
                 {
                     "name": "Morning Glow",
-                    "code": "#e18472"
+                    "code": "#e18472",
+                    "image":"./images/smartwatch/smartwatch_yellow.png"
                 }
             ]
         }
