@@ -1,12 +1,10 @@
 /* eslint-disable react/prop-types */
-
 import Button from "../button/Button";
 import { useCart } from "../../customHooks/useCart";
 import { useState } from "react";
 
-const QuantityForm = ({ product }) => {
-
-    const { addToCart } = useCart();
+const QuantityForm = ({ product, selectedColor }) => {
+    const { addToCart } = useCart(); 
     const [quantity, setQuantity] = useState(1);
 
     const handleQuantityChange = (e) => {
@@ -14,8 +12,9 @@ const QuantityForm = ({ product }) => {
     };
 
     const handleAddToCart = () => {
-        addToCart(product, quantity);
+        addToCart(product, quantity, selectedColor); 
     };
+
     return (
         <form className="flex flex-col gap-2.5">
             <label className="sr-only">Quantity</label>
@@ -34,4 +33,3 @@ const QuantityForm = ({ product }) => {
 };
 
 export default QuantityForm;
-
