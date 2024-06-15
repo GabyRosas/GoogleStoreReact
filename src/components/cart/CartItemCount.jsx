@@ -1,11 +1,13 @@
+/* eslint-disable react/prop-types */
 import { useCart } from '../../customHooks/useCart';
 
 
-const CartItemCount = () => {
+const CartItemCount = ({className}) => {
+
   const { getTotalItems } = useCart();
 
     return (
-    <span>{getTotalItems()}</span>
+    <span className={className}>{getTotalItems()}</span>
   );
 };
 
