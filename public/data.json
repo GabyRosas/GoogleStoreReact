@@ -21,27 +21,27 @@
                 {
                     "name": "Cream White",
                     "code": "#e7e3e0",
-                    "image": "./images/earbuds/earbuds_color_creamwhite.png"
+                    "image": "./images/earbuds/earbuds_color_skyblue.png"
                 },
                 {
                     "name": "Midnight Black",
                     "code": "#4b4b4d",
-                    "image": "./images/earbuds/earbuds_color_midnightblack.png"
+                    "image": "./images/earbuds/earbuds_color_skyblue.png"
                 },
                 {
                     "name": "Soft Gray",
                     "code": "#d2d7da",
-                    "image": "./images/earbuds/earbuds_color_softgray.png"
+                    "image": "./images/earbuds/earbuds_color_skyblue.png"
                 },
                 {
                     "name": "Pale Green",
                     "code": "#dfe5b7",
-                    "image": "./images/earbuds/earbuds_color_palegreen.png"
+                    "image": "./images/earbuds/earbuds_color_skyblue.png"
                 },
                 {
                     "name": "Coral Red",
                     "code": "#e18472",
-                    "image": "./images/earbuds/earbuds_color_coralred.png"
+                    "image": "./images/earbuds/earbuds_color_skyblue.png"
                 }
             ]
         },

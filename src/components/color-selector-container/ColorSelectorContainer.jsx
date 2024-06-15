@@ -3,14 +3,16 @@ import EarbudColorSelector from "../earbud-color-selector/EarbudColorSelector";
 import SmartWatchColorSelect from "../smartwatch-color-select/SmartWatchColorSelect";
 import { useCart } from '../../customHooks/useCart';
 
+
 const ColorSelectorContainer = ({ product }) => {
     const { colors, category } = product;
     const { setSelectedColor } = useCart();
 
+
     const handleColorSelect = (colorCode) => {
-        console.log(colorCode);
         setSelectedColor(colorCode);
     };
+
 
     return (
         <div className="md:mb-[30px]">

@@ -1,15 +1,26 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react';
+import { useCart } from '../../customHooks/useCart'; // Importa il contesto del carrello
 import CircleImages from '../circle-images/CircleImages';
 import MainImage from '../main-image/MainImage';
 
-const ProductImages = ({ images, name, category }) => {
+const ProductImages = ({ images, name, category, colors }) => {
+    const { selectedColor } = useCart(); 
     const [mainImage, setMainImage] = useState(images[0]);
-    const filteredImages = images.filter(image => image !== mainImage);
-
     useEffect(() => {
-        setMainImage(images[0]);
-    }, [images]);
+        const selectedColorImage = colors.find(color => color.code === selectedColor)?.image;
+        if (category === "fitbit" && selectedColorImage) {
+            setMainImage(selectedColorImage);
+        } else {
+            setMainImage(images[0]);
+        }
+    }, [selectedColor, colors, images, category]);
+
+    const handleThumbnailClick = (image) => {
+        setMainImage(image);
+    };
+
+    const filteredImages = images.filter(image => image !== mainImage);
 
     if (category === 'earbuds') {
         return (
@@ -19,7 +30,7 @@ const ProductImages = ({ images, name, category }) => {
                         <CircleImages
                             key={index}
                             image={image}
-                            onClick={() => setMainImage(image)}
+                            onClick={() => handleThumbnailClick(image)}
                         />
                     ))}
                 </ul>
