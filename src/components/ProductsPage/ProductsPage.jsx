@@ -1,13 +1,13 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import ProductDetails from '../product-details/ProductDetails';
-import ProductImages from '../product-images/ProductImages';
-import AddToCart from '../add-to-cart/AddToCart';
-import DetailsLink from '../details-link/DetailsLink';
+import ProductDetails from './ProductDetails/ProductDetails';
+import ProductImages from './ImagesContainer/ImagesContainer';
+import AddToCart from './AddToCart/AddToCart';
+import DetailsLink from '../DetailsLink/DetailsLink';
 import { useCart } from '../../customHooks/useCart'; 
 
-const Products = ({ category }) => {
+const ProductsPage = ({ category }) => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -65,4 +65,4 @@ const Products = ({ category }) => {
     );
 }
 
-export default Products;
+export default ProductsPage;

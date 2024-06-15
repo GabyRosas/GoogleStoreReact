@@ -1,6 +1,6 @@
-import CartOrderSummary from "./CartOrderSummary";
-import CartProducts from "./CartProducts";
-import CartItemCount from './CartItemCount';
+import CartOrderSummary from "./CartOrderSummary/CartOrderSummary";
+import CartList from "./CartList/CartList";
+import CartItemCount from './CartItemCount/CartItemCount';
 
 function Cart() {
   return (
@@ -10,7 +10,7 @@ function Cart() {
         <p className="text-center  text-[length:var(--fs-subtitle)]">Items <CartItemCount/> </p>
       </header>
       <main className="flex flex-col items-center px-10 lg:flex-row lg:items-start justify-center gap-5">
-        <CartProducts />
+        <CartList />
         <CartOrderSummary />
       </main>
     </>

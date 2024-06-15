@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
-import ColorSelectorContainer from "../color-selector-container/ColorSelectorContainer";
-import ProductsHeader from "../products-header/ProductsHeader";
+import ColorSelectorContainer from "./ColorSelectorContainer/ColorSelectorContainer";
+import ProductsHeader from "./ProductsHeader/ProductsHeader";
 
 const ProductDetails = ({ product }) => {
     const { name, price, description } = product;

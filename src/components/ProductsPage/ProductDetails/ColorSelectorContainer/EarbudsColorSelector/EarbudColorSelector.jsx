@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
-import { useCart } from '../../customHooks/useCart';
+import { useCart } from '../../../../../customHooks/useCart';
 import classes from './EarbudsColorSelector.module.css'
 
 const EarbudColorSelector = ({ color, handleClick }) => {

@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types */
-import Button from "../button/Button";
-import { useCart } from "../../customHooks/useCart";
+
+import Button from "../../Button/PrimaryButton/PrimaryButton";
+import { useCart } from "../../../customHooks/useCart";
 import { useState } from "react";
 
-const QuantityForm = ({ product, selectedColor }) => {
-    const { addToCart } = useCart(); 
+const QuantityForm = ({ product }) => {
+    const { addToCart, selectedColor } = useCart(); 
     const [quantity, setQuantity] = useState(1);
 
     const handleQuantityChange = (e) => {
@@ -33,3 +34,5 @@ const QuantityForm = ({ product, selectedColor }) => {
 };
 
 export default QuantityForm;
+
+

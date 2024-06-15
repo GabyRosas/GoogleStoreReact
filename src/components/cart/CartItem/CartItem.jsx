@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
-import { useCart } from '../../customHooks/useCart';
-import DeliveryInfo from '../delivery-info/DeliveryInfo';
-import RemoveButton from '../button/RemoveButton';
-import classes from './CartProductItem.module.css';
+import { useCart } from '../../../customHooks/useCart';
+import DeliveryInfo from '../../DeliveryInfo/DeliveryInfo';
+import RemoveButton from '../../Button/RemoveButton/RemoveButton';
+import classes from './CartItem.module.css';
 
-const CartProductItem = ({ product }) => {
+const CartItem = ({ product }) => {
   const { updateQuantity } = useCart();
 
   const handleQuantityChange = (e) => {
@@ -63,4 +63,4 @@ const CartProductItem = ({ product }) => {
   );
 }
 
-export default CartProductItem;
+export default CartItem;

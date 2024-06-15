@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-const Button = ({ text, handleClick, className }) => {
+const PrimaryButton = ({ text, handleClick, className }) => {
     return (
         <button type ="button"
             className={`block bg-[color:var(--col-primary)] text-[white] w-[280px] h-[50px] text-base cursor-pointer rounded-[10px] border-[none] transition-opacity duration-[0.3s] ease-[ease] hover:opacity-80 ${className}`}
@@ -9,4 +9,4 @@ const Button = ({ text, handleClick, className }) => {
         </button>
     )
 }
-export default Button
+export default PrimaryButton

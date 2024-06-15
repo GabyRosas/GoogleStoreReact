@@ -1,5 +1,5 @@
-import { useCart } from "../../customHooks/useCart"
-import CartProductItem from "./CartProductItem"
+import { useCart } from "../../../customHooks/useCart"
+import CartProductItem from "../CartItem/CartItem"
 
 const CartProducts = () => {
     

@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react';
-import { useCart } from '../../customHooks/useCart'; // Importa il contesto del carrello
-import CircleImages from '../circle-images/CircleImages';
-import MainImage from '../main-image/MainImage';
+import { useCart } from '../../../customHooks/useCart'; // Importa il contesto del carrello
+import Thumbnails from './Thumbnails/Thumbnails';
+import MainImage from './MainImage/MainImage';
 
-const ProductImages = ({ images, name, category, colors }) => {
+const ImagesContainer = ({ images, name, category, colors }) => {
     const { selectedColor } = useCart(); 
     const [mainImage, setMainImage] = useState(images[0]);
     useEffect(() => {
@@ -27,7 +27,7 @@ const ProductImages = ({ images, name, category, colors }) => {
             <div className="grid align-center grid-cols-1 lg:grid-cols-[50px_auto] gap-10">
                 <ul className="hidden lg:flex lg:flex-col justify-center gap-2.5">
                     {filteredImages.map((image, index) => (
-                        <CircleImages
+                        <Thumbnails
                             key={index}
                             image={image}
                             onClick={() => handleThumbnailClick(image)}
@@ -44,4 +44,4 @@ const ProductImages = ({ images, name, category, colors }) => {
     }
 };
 
-export default ProductImages;
+export default ImagesContainer;
