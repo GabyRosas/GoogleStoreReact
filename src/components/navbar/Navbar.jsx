@@ -19,22 +19,22 @@ function Navbar() {
                 <div className="flex flex-grow justify-start">
                     <ul className="space-x-6 hidden md:flex">
                         <li>
-                            <a href="#Phones" className="text-gray-700 hover:text-gray-500">Phones</a>
+                            <a href="#Phones" className=" hover:text-gray-500">Phones</a>
                         </li>
                         <li>
-                            <Link to={'/'} className="text-gray-700 hover:text-gray-500">Earbuds</Link>
+                            <Link to={'/'} className="hover:text-gray-500">Earbuds</Link>
                         </li>
                         <li>
-                            <Link to={'/fitbit'} className="text-gray-700 hover:text-gray-500">Watches</Link>
+                            <Link to={'/fitbit'} className="hover:text-gray-500">Watches</Link>
                         </li>
                         <li>
-                            <a href="#Smart Home" className="text-gray-700 hover:text-gray-500">Smart Home</a>
+                            <a href="#Smart Home" className="hover:text-gray-500">Smart Home</a>
                         </li>
                         <li>
-                            <a href="#Accessories" className="text-gray-700 hover:text-gray-500">Accessories</a>
+                            <a href="#Accessories" className="hover:text-gray-500">Accessories</a>
                         </li>
                         <li>
-                            <a href="#Subscriptions" className="text-gray-700 hover:text-gray-500">Subscriptions</a>
+                            <a href="#Subscriptions" className="hover:text-gray-500">Subscriptions</a>
                         </li>
                     </ul>
                 </div>
@@ -48,7 +48,7 @@ function Navbar() {
                     </a>
                     <Link to="cart" className="relative">
                         <img src="/images/icons/Cart.svg" alt="Cart" className="h-6 w-6 hover:opacity-75 cursor-pointer relative" />
-                        {cart.length > 0 && <CartItemCount className=" text-white absolute top-[-8px] right-[-8px] qbg-[color:var(--col-primary)]  px-[5px] rounded-[50%]"/>}
+                        {cart.length > 0 && <CartItemCount className=" text-white absolute top-[-8px] right-[-8px] bg-[color:var(--col-primary)]  px-[5px] rounded-[50%]"/>}
                     </Link>
                     <a href="#user">
                         <img src="/images/icons/Avatar.svg" alt="User" className="h-6 w-6 hover:opacity-75 cursor-pointer" />
@@ -57,7 +57,7 @@ function Navbar() {
                     <div className="md:hidden">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className="text-gray-700 hover:text-gray-500 focus:outline-none focus:text-gray-500"
+                            className="hover:text-gray-500 focus:outline-none focus:text-gray-500"
                         >
 
                             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -77,22 +77,22 @@ function Navbar() {
             <div className={`md:hidden ${isOpen ? "block" : "hidden"}`}>
                 <ul className="flex flex-col space-y-4 mt-4">
                     <li>
-                        <a href="#Phones" className="text-gray-700 hover:text-gray-500">Phones</a>
+                        <a href="#Phones" className="hover:text-gray-500">Phones</a>
                     </li>
                     <li>
-                        <Link to={'/'} className="text-gray-700 hover:text-gray-500">Earbuds</Link>
+                        <Link to={'/'} className="hover:text-gray-500">Earbuds</Link>
                     </li>
                     <li>
-                        <Link to={'/fitbit'} className="text-gray-700 hover:text-gray-500">Watches</Link>
+                        <Link to={'/fitbit'} className="hover:text-gray-500">Watches</Link>
                     </li>
                     <li>
-                        <a href="#Smart Home" className="text-gray-700 hover:text-gray-500">Smart Home</a>
+                        <a href="#Smart Home" className="hover:text-gray-500">Smart Home</a>
                     </li>
                     <li>
-                        <a href="#Accessories" className="text-gray-700 hover:text-gray-500">Accessories</a>
+                        <a href="#Accessories" className="hover:text-gray-500">Accessories</a>
                     </li>
                     <li>
-                        <a href="#Subscriptions" className="text-gray-700 hover:text-gray-500">Subscriptions</a>
+                        <a href="#Subscriptions" className="hover:text-gray-500">Subscriptions</a>
                     </li>
                 </ul>
             </div>
