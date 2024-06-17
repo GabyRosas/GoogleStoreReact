@@ -1,13 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react';
 import { useCart } from '../../../customHooks/useCart'; // Importa il contesto del carrello
-<<<<<<<< HEAD:src/components/ProductPage/ProductImages/ProductImages.jsx
-import MainImage from './MainImage/MainImage';
-import Thumbnails from './Thumbnails/Thumbnails';
-========
 import Thumbnails from './Thumbnails/Thumbnails';
 import MainImage from './MainImage/MainImage';
->>>>>>>> 70f3103751f60b5697ec6e8084b146d0f16b40c7:src/components/ProductsPage/ImagesContainer/ImagesContainer.jsx
 
 const ImagesContainer = ({ images, name, category, colors }) => {
     const { selectedColor } = useCart(); 

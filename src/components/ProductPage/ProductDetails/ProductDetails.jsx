@@ -1,10 +1,5 @@
 /* eslint-disable react/prop-types */
-
-<<<<<<<< HEAD:src/components/ProductPage/ProductDetails/ProductDetails.jsx
-import ColorSelectorContainer from "../../ColorSelectorContainer/ColorSelectorContainer";
-========
-import ColorSelectorContainer from "./ColorSelectorContainer/ColorSelectorContainer";
->>>>>>>> 70f3103751f60b5697ec6e8084b146d0f16b40c7:src/components/ProductsPage/ProductDetails/ProductDetails.jsx
+import ColorSelectorContainer from "../../ColorSelectorContainer/ColorSelectorContainer"; 
 import ProductsHeader from "./ProductsHeader/ProductsHeader";
 
 const ProductDetails = ({ product }) => {

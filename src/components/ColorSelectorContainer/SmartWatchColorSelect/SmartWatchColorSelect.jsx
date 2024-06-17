@@ -1,10 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
-<<<<<<<< HEAD:src/components/ColorSelectorContainer/SmartWatchColorSelect/SmartWatchColorSelect.jsx
 import { useCart } from '../../../customHooks/useCart';
-========
-import { useCart } from '../../../../../customHooks/useCart';
->>>>>>>> 70f3103751f60b5697ec6e8084b146d0f16b40c7:src/components/ProductsPage/ProductDetails/ColorSelectorContainer/SmartwatchColorSelector/SmartWatchColorSelector.jsx
 import classes from './SmartWatchColorSelect.module.css'
 
 const SmartWatchColorSelect = ({ color, handleClick }) => {
