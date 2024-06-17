@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="bg-gray-100 py-4 px-6 md:px-12 lg:px-24 xl:px-40 w-full mt-10 fixed bottom-0">
+    <footer className="bg-gray-100 py-4 px-6 md:px-12 lg:px-24 xl:px-40 w-full mt-5">
       <div className="flex flex-col md:flex-row md:justify-between items-center">
         {/* Redes Sociales */}
         <ul className="flex items-center gap-4 mb-4 md:mb-0">
