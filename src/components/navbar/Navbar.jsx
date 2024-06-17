@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useCart } from "../../customHooks/useCart";
-import CartItemCount from '../Cart/CartItemCount/CartItemCount'
+import CartItemCount from '../cart/CartItemCount/CartItemCount'
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
