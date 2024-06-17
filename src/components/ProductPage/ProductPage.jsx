@@ -54,7 +54,7 @@ const ProductPage = ({ category }) => {
     return (
         <>
             <DetailsLink />
-            <main className="grid gap-5 lg:grid-cols-[auto_35%] grid-cols-1 px-[22px] h-full mb-5">
+            <main className="grid gap-5 lg:grid-cols-[auto_35%] grid-cols-1 px-[22px] h-full">
                 <ProductImages images={product.images} name={product.name} category={product.category} colors={product.colors} />
                 <div>
                     <ProductDetails product={product} />
