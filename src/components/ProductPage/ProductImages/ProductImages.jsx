@@ -24,8 +24,8 @@ const ImagesContainer = ({ images, name, category, colors }) => {
 
     if (category === 'earbuds') {
         return (
-            <div className="grid align-center grid-cols-1 lg:grid-cols-[50px_auto] gap-10">
-                <ul className="hidden lg:flex lg:flex-col justify-center gap-2.5">
+            <div className="grid align-center grid-cols-1 lg:grid-cols-[50px_auto] gap-10 ">
+                <ul className="hidden lg:flex lg:flex-col justify-center gap-2.5 max-h-[70%]">
                     {filteredImages.map((image, index) => (
                         <Thumbnails
                             key={index}
