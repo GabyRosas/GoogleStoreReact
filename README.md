@@ -1,17 +1,17 @@
 # Google Store - React
 
-###  Table of Contents
-2.  Project Description
-3. Technical Competencies
-4.  Technologies
-5.  Tools
-6.  Key Features
-7.  Installation and Execution
-8.  Project Development
-9. Useful Resources
-10. Contributors
+##  Table of Contents 
+- [Project Description](#project-description)
+- Technical Competencies
+- Technologies
+- Tools
+- Key Features
+- Installation and Execution
+- Project Development
+- Useful Resources
+- [Contributors](#contributors)
 
-### 1. Project Description 
+## Project Description 
 We have designed a web application for Google Store, allowing customers to explore and purchase two new products through an interactive and modern interface, developed using the JavaScript library React.js. The project includes product pages, a functional shopping cart, and navigation adapted for various devices.
 
 ### 2. Technical Competencies
@@ -74,7 +74,7 @@ Functional Programming: Use of advanced ECMAScript 6 methods such as map, filter
 - Common Mistakes by Junior Developers in React.js
 - useEffect
 
-### 9. Contributors 👯‍♀️
+## Contributors 
 The following people have contributed to the development of "Google Store - React." Their efforts and dedication have been essential to bringing this project to fruition:
 
 - Gaby Rosas, Developer: https://github.com/GabyRosas/GoogleStoreReact
