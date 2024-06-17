@@ -1,7 +1,7 @@
 import { CartContextProvider} from "./context/cart.jsx";
-import Navbar from "./components/Navbar//Navbar.jsx";
+import Navbar from "./components/Navbar/Navbar.jsx";
 import Cart from './components/Cart/Cart.jsx';
-import Footer from "./components/Footer/Footer";
+import Footer from "./components/Footer/Footer.jsx";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import ProductPage from "./components/ProductPage/ProductPage.jsx";
 
