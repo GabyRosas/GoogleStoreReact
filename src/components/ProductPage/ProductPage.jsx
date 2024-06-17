@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import ProductDetails from './ProductDetails/ProductDetails';
 import ProductImages from './ProductImages/ProductImages';
 import AddToCart from '../AddToCart/AddToCart';
-import DetailsLink from '../DetailsILink/DetailsLink';
+import DetailsLink from '../DetailsLink/DetailsLink';
 import { useCart } from '../../customHooks/useCart'; 
 
 const ProductPage = ({ category }) => {
