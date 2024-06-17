@@ -9,7 +9,7 @@ function Cart() {
         <h1 className=" text-[length:var(--fs-title)] text-center">Cart</h1>
         <p className="text-center  text-[length:var(--fs-subtitle)]">Items <CartItemCount/> </p>
       </header>
-      <main className="flex flex-col items-center px-10 lg:flex-row lg:items-start justify-center gap-5">
+      <main className="flex flex-col items-center px-10 lg:flex-row lg:items-start justify-center gap-5 mb-5">
         <CartList />
         <CartOrderSummary />
       </main>
