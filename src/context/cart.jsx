@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+
 import { createContext, useState } from "react";
 
 export const CartContext = createContext();
@@ -15,7 +16,8 @@ export function CartContextProvider({ children }) {
     });
   };
 
-  const addToCart = (product, quantity, colorCode) => {
+  const addToCart = (product, quantity) => {
+    const colorCode = selectedColor; // Usa selectedColor dal contesto
     setCart(prevCart => {
       const existingProduct = prevCart.find((p) => p.id === product.id && p.selectedColor === colorCode);
 
@@ -88,7 +90,7 @@ export function CartContextProvider({ children }) {
         cartSubtotal,
         setShippingCost,
         setSelectedColor,
-        selectedColor // Aggiungi selectedColor al valore del contesto
+        selectedColor // Assicurati che selectedColor sia parte del valore del contesto
       }}
     >
       {children}
