@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useCart } from '../../customHooks/useCart';
+import { useCart } from '../../../customHooks/useCart';
 
 
 const CartItemCount = ({className}) => {

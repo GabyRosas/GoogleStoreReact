@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
-import { useCart } from '../../customHooks/useCart';
-import DeliveryInfo from '../delivery-info/DeliveryInfo';
-import RemoveButton from '../button/RemoveButton';
-import classes from './CartProductItem.module.css';
+import { useCart } from '../../../customHooks/useCart';
+import DeliveryInfo from '../../DeliveryInfo/DeliveryInfo';
+import RemoveButton from '../../Button/RemoveButton/RemoveButton';
+import classes from './CartItem.module.css';
 
-const CartProductItem = ({ product }) => {
+const CartItem = ({ product }) => {
   const { updateQuantity } = useCart();
 
   const handleQuantityChange = (e) => {
@@ -14,6 +14,7 @@ const CartProductItem = ({ product }) => {
 
   const selectedColor = product.colors.find(color => color.code === product.selectedColor);
   const selectedImage = selectedColor ? selectedColor.image : product.images[0];
+
 
   return (
     <li
@@ -32,7 +33,9 @@ const CartProductItem = ({ product }) => {
         alt={product.name}
       />
       <div className="justify-self-start col-[2_/_span_2] px-3">
-        <h3 className="text-[length:var(--fs-regular)] ">{`${product.name} in ${selectedColor.name} `}</h3>
+        <h3 className="text-[length:var(--fs-regular)] ">
+          {`${product.name} in ${selectedColor ? selectedColor.name : ''} `} {/* Assicurati che selectedColor esista */}
+        </h3>
         <div className="flex">
           <p>Cant:</p>
           <label className="sr-only">Quantity</label>
@@ -63,4 +66,4 @@ const CartProductItem = ({ product }) => {
   );
 }
 
-export default CartProductItem;
+export default CartItem;

@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
-import EarbudColorSelector from "../earbud-color-selector/EarbudColorSelector";
-import SmartWatchColorSelect from "../smartwatch-color-select/SmartWatchColorSelect";
+import EarbudColorSelector from "./EarbudsColorSelector/EarbudColorSelector";
+import SmartWatchColorSelect from "./SmartWatchColorSelect/SmartWatchColorSelect";
 import { useCart } from '../../customHooks/useCart';
 
 

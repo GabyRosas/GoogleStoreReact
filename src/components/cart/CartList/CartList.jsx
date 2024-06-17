@@ -1,7 +1,7 @@
-import { useCart } from "../../customHooks/useCart"
-import CartProductItem from "./CartProductItem"
+import { useCart } from "../../../customHooks/useCart"
+import CartItem from "../CartItem/CartItem"
 
-const CartProducts = () => {
+const CartList = () => {
     
     const {cart} = useCart()
     console.log(cart)
@@ -12,7 +12,7 @@ const CartProducts = () => {
             <p className="text-center">Your cart is empty.</p>
           ) : (
             cart.map((product, index) => (
-            <CartProductItem key={index}
+            <CartItem key={index}
             product = {product} />
 
             ))
@@ -21,4 +21,4 @@ const CartProducts = () => {
   )
 }
 
-export default CartProducts
+export default CartList

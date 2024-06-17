@@ -1,5 +1,5 @@
-import { useCart } from "../../customHooks/useCart";
-import Button from "../button/Button";
+import { useCart } from "../../../customHooks/useCart";
+import Button from "../../Button/PrimaryButton/PrimaryButton";
 
 
 const CartOrderSummary = () => {
